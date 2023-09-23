@@ -5,7 +5,7 @@ import {useTitle} from "../Hooks/useTitle";
 
 export function MovieDetail(){
 
-    const [movie,setMovie] = useState([]);
+    const [movie,setMovie] = useState({});
 
     const params=useParams();
 
