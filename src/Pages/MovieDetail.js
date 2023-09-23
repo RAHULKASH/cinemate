@@ -16,7 +16,7 @@ export function MovieDetail(){
             setMovie(result);
         }
         fetchDetail();
-    },[])
+    },[params.id])
 
     const title_path=useTitle(`Movie-${movie.title}`);
 
