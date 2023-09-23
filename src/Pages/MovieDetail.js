@@ -20,10 +20,6 @@ export function MovieDetail(){
         }
         fetchDetail();
 
-        if(movie.length === 0){
-            navigate("*");
-        }
-
     },[params.id])
 
     useTitle(`Movie-${movie.title}`);
