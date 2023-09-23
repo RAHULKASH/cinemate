@@ -13,7 +13,7 @@ export function Search({url}){
     return(
         <div className="min-h-screen p-10 dark:bg-gray-800">
             <div className="pb-10 px-4 text-2xl dark:text-white max-sm:text-center max-sm:px-0">
-                <p>{ data!=0 ? `Result for '${movie}'` : `No result found for '${movie}'` }</p>
+                <p>{ `Results for '${movie}'`}</p>
             </div>
             <div className="flex flex-row justify-center gap-10 flex-wrap">
             {
