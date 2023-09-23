@@ -2,12 +2,15 @@ import image from "../assets/image.png"
 import { useParams } from "react-router-dom"
 import { useState,useEffect } from "react";
 import {useTitle} from "../Hooks/useTitle";
+import { useNavigate } from "react-router-dom";
 
 export function MovieDetail(){
 
-    const [movie,setMovie] = useState({});
+    const [movie,setMovie] = useState([]);
+    const navigate = useNavigate();
 
     const params=useParams();
+    console.log(params.id);
 
     useEffect(()=>{
         async function fetchDetail(){
@@ -16,6 +19,11 @@ export function MovieDetail(){
             setMovie(result);
         }
         fetchDetail();
+
+        if(movie.length === 0){
+            navigate("*");
+        }
+
     },[params.id])
 
     useTitle(`Movie-${movie.title}`);
