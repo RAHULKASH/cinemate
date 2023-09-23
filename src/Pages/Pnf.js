@@ -4,7 +4,7 @@ import {useTitle} from "../Hooks/useTitle";
 
 export function Pnf(){
 
-    const title_path=useTitle("404 !Oops");
+    useTitle("404 !Oops");
 
     return(
         <div className="min-h-screen p-10 flex flex-col justify-evenly items-center dark:bg-gray-800">

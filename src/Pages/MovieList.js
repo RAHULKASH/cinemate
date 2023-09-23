@@ -4,7 +4,7 @@ import { useTitle } from "../Hooks/useTitle";
 
 export function MovieList({url,title}){
 
-    const title_head = useTitle(title);
+    useTitle(title);
 
     const { data } = useFetch(url);
 

@@ -18,7 +18,7 @@ export function MovieDetail(){
         fetchDetail();
     },[params.id])
 
-    const title_path=useTitle(`Movie-${movie.title}`);
+    useTitle(`Movie-${movie.title}`);
 
     const img=movie.poster_path?`https://image.tmdb.org/t/p/w500/${movie.poster_path}`:image;
 

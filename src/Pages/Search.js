@@ -8,7 +8,7 @@ export function Search({url}){
     const [searchParams] =useSearchParams();
     const movie = searchParams.get("q");
     const { data } = useFetch(url, movie);
-    const title_path=useTitle(`Search-${movie}`);
+    useTitle(`Search-${movie}`);
 
     return(
         <div className="min-h-screen p-10 dark:bg-gray-800">
