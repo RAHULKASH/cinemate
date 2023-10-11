@@ -14,16 +14,16 @@ export function MovieDetail(){
 
     useEffect(()=>{
         async function fetchDetail(){
-            const response = await fetch(`https://api.themoviedb.org/3/movie/${params.id}?api_key=8c94d8fa18a936ed92d2bdd653a3b683`);
+            const response = await fetch(`https://api.themoviedb.org/3/movie/${params.id}?api_key=5daed949e1a5bce6eba6ec8e10795861`);
             const result= await response.json();
             setMovie(result);
         }
         fetchDetail();
 
     },[params.id])
-
+ 
     useTitle(`Movie-${movie.title}`);
-
+    
     const img=movie.poster_path?`https://image.tmdb.org/t/p/w500/${movie.poster_path}`:image;
 
     return(
